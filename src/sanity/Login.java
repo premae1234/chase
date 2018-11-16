@@ -19,7 +19,9 @@ public class Login {
         System.setProperty("webdriver.chrome.driver",("user.dir")+"/chromedriver.exe");
         
         }
-     
+        
+   //  Scenario:1-Login to Marlin
+        
         driver.get("https://marlin-frontend2.uat.marlin.maestrano.io/user/login/");
         try {
 			Thread.sleep(4000);
@@ -42,8 +44,20 @@ public class Login {
             
             e.printStackTrace();
             
+            
+  // Scenario:2 - Redirection to marketplace when no service is linked to marlin
+            
     // not clicking on connect button ,though not throwing any error
            driver.findElement(By.xpath("(//a[text()='Connect'])[1]")).click();
+          
+           driver.findElement(By.xpath("//button[text()='Proceed']")).click();
+           driver.findElement(By.xpath("//input[@name='Email']")).sendKeys("karan.bansal+25Oct@maestrano.com");
+           driver.findElement(By.xpath("//input[@name='Password']")).sendKeys("Bullseye@1");
+           driver.findElement(By.xpath("//button[@name='SignIn']")).click();
+           
+           // write for continue button
+           
+           driver.findElement(By.xpath("//button[contains(text(),'Connect')]")).click();
                 
         }
 
