@@ -31,21 +31,21 @@ public class Login {
         driver.findElement(By.name("email")).sendKeys("prema.eddyam+32@maestrano.com");
         driver.findElement(By.name("password")).sendKeys("Password1!");
         driver.findElement(By.xpath("//button[contains(text(),'Login')]")).click();
+        
         /*WebDriverWait wait = new WebDriverWait(driver,30);
         WebElement element = wait.until(
-        //ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(@class,'track-link')])[4]")));
+        ExpectedConditions.elementToBeClickable(By.xpath("(//a[text()='Connect'])[1]")));
 */		        
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
+            
             e.printStackTrace();
             
     // not clicking on connect button ,though not throwing any error
-            driver.findElement(By.xpath("(//a[contains(@class,'track-link')])[4]")).click();
-            // driver.findElement(By.xpath("(//a[text()='Connect'])[1]")).click();
-             
-        }	
+           driver.findElement(By.xpath("(//a[text()='Connect'])[1]")).click();
+                
+        }
 
 }
 }
