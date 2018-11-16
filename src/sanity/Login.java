@@ -40,6 +40,8 @@ public class Login {
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+            
+    // not clicking on connect button ,though not throwing any error
             driver.findElement(By.xpath("(//a[contains(@class,'track-link')])[4]")).click();
             // driver.findElement(By.xpath("(//a[text()='Connect'])[1]")).click();
              
