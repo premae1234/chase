@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Login {
+public class NewUserLogin {
 
 	public static void main(String[] args) {
 		
@@ -30,7 +30,7 @@ public class Login {
 			e1.printStackTrace();
 		}
        // driver.manage().window().maximize();
-        driver.findElement(By.name("email")).sendKeys("prema.eddyam+32@maestrano.com");
+        driver.findElement(By.name("email")).sendKeys("prema.eddyam+34@maestrano.com");
         driver.findElement(By.name("password")).sendKeys("Password1!");
         driver.findElement(By.xpath("//button[contains(text(),'Login')]")).click();
         
@@ -45,7 +45,7 @@ public class Login {
             e.printStackTrace();
             
             
-  // Scenario:2 - Redirection to marketplace when no service is linked to marlin
+  // Scenario:2 - Redirection to marketplace when no service is linked to marlin(new user)
             
     // not clicking on connect button ,though not throwing any error
            driver.findElement(By.xpath("(//a[text()='Connect'])[1]")).click();
