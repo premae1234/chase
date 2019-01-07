@@ -57,6 +57,7 @@ public class NewUserLogin {
            
            // write for continue button
            
+           //clickon next button for 
            driver.findElement(By.xpath("//button[contains(text(),'Connect')]")).click();
                 
         }
